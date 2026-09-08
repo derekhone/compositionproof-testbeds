@@ -1,0 +1,41 @@
+{
+  "title": "CompositionProof-2: Cross-Witness Correlation Across Quantum Hardware Calibration Epochs - Preregistered Protocol and Epoch 1 Evidence",
+  "upload_type": "dataset",
+  "description": "<p><strong>STATUS: LONGITUDINAL HARDWARE CAMPAIGN IN PROGRESS - 1 of at least 20 distinct calibration epochs collected - NO FINAL VERDICT.</strong></p><p>This release documents the preregistered CompositionProof-2 longitudinal hardware campaign and its first collected calibration epoch. The campaign tests whether CHSH and Mermin-3 witness performance covaries across distinct hardware calibration states on one named IBM device. The design, sampling plan, correlation estimator, effect band, drift guards, and permitted-claim wording were frozen and SHA-256 hash-locked before any quantum hardware ran.</p><p>Epoch 1 was executed on ibm_marrakesh (IBM Heron r2, 156 qubits): CHSH S = 2.7205; Mermin-3 |M| = 3.7710; 11 QPU-seconds. Epoch 1 is ONE observation in a preregistered series requiring at least 20 distinct calibration epochs (target 30). <strong>No longitudinal CORRELATED / UNCORRELATED / INCONCLUSIVE verdict is reported or implied by this release.</strong> A single epoch has no fluctuation series, so no cross-witness correlation can be estimated from it.</p><p><strong>Governance:</strong> each hardware epoch requires fresh authorization after verification of calibration state, package integrity, remaining QPU allocation, and prior-epoch count. Prior authorization does not constitute current execution permission.</p><p><strong>Honesty bounds:</strong> device-dependent witnesses on co-located qubits; locality and detection loopholes OPEN; NOT device-independent and NOT loophole-free; any future cross-epoch correlation is an observed association on one device over the measured window, NOT a causal common cause and NOT universal; detecting a correlation is reliable at n~30 but certifying its absence needs n~150; no first/only claim beyond cited DOIs.</p><p>Frozen composite lock: ebe0919b997341569670ccd27b2a8ff754599d242489a2b06ff4db20c8872fd6 (11 files; verified INTACT before the Epoch 1 submission).</p>",
+  "creators": [
+    {
+      "name": "Hone, Derek",
+      "affiliation": "Remnant Fieldworks Inc."
+    }
+  ],
+  "keywords": [
+    "quantum",
+    "nonclassicality witness",
+    "CHSH",
+    "Mermin inequality",
+    "proof composition",
+    "calibration drift",
+    "longitudinal",
+    "preregistration",
+    "reproducibility",
+    "ExecutionProof",
+    "Coherence-Inheritance Fusion"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "version": "1.0-epoch1",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.21436092",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.21430451",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Preregistration and post-execution evidence are kept as separate layers; the frozen preregistration is not rewritten to incorporate Epoch 1. Future versions will add epochs (1-5, 1-10, 1-15) and a final version once the preregistered minimum sample is reached and the frozen analysis is executed."
+}

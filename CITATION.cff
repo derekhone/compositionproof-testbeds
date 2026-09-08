@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this research record, please cite it as below."
+title: "CompositionProof-2: Cross-Witness Correlation Across Quantum Hardware Calibration Epochs - Preregistered Protocol and Epoch 1 Evidence"
+type: dataset
+authors:
+  - given-names: Derek
+    family-names: Hone
+    affiliation: "Remnant Fieldworks Inc."
+abstract: >-
+  Preregistered, longitudinal hardware research campaign. The design, sampling
+  plan, correlation estimator, effect band, drift guards, and permitted-claim
+  wording were frozen and SHA-256 hash-locked before any quantum hardware ran.
+  The campaign tests whether the epoch-to-epoch fluctuations of two independently
+  defined nonclassicality witnesses (CHSH and Mermin-3) covary across distinct
+  hardware calibration states on one named IBM device. This release documents the
+  frozen protocol and its first collected calibration epoch (Epoch 1): executed on
+  ibm_marrakesh (IBM Heron r2, 156 qubits), CHSH S=2.7205, Mermin-3 |M|=3.7710,
+  11 QPU-seconds. Epoch 1 is ONE observation in a preregistered series requiring
+  at least 20 distinct calibration epochs (target 30). No longitudinal
+  CORRELATED / UNCORRELATED / INCONCLUSIVE verdict is reported or implied by this
+  release; a single epoch has no fluctuation series. Governance: each hardware
+  epoch requires fresh authorization (prior authorization does not constitute
+  current execution permission). Honesty bounds: device-dependent witnesses on
+  co-located qubits; locality and detection loopholes OPEN; NOT device-independent
+  and NOT loophole-free; any future cross-epoch correlation is an observed
+  association on one device over the measured window, NOT a causal common cause
+  and NOT universal; detecting correlation is reliable at n~30 but certifying its
+  absence needs n~150; no first/only claim beyond cited DOIs.
+keywords:
+  - quantum
+  - nonclassicality witness
+  - CHSH
+  - Mermin inequality
+  - proof composition
+  - calibration drift
+  - longitudinal
+  - preregistration
+  - reproducibility
+  - ExecutionProof
+  - Coherence-Inheritance Fusion
+license: CC-BY-4.0
+date-released: 2026-09-08
+version: "1.0-epoch1"
+references:
+  - type: dataset
+    title: "OMNI-1: Multi-witness ExecutionProof (spatial Bell-CHSH, temporal Leggett-Garg, contextual Peres-Mermin)"
+    authors:
+      - given-names: Derek
+        family-names: Hone
+        affiliation: "Remnant Fieldworks Inc."
+    doi: 10.5281/zenodo.21436092
+  - type: dataset
+    title: "BELLWETHER-3: State-independent contextuality witness (Peres-Mermin)"
+    authors:
+      - given-names: Derek
+        family-names: Hone
+        affiliation: "Remnant Fieldworks Inc."
+    doi: 10.5281/zenodo.21430451
