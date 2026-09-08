@@ -1,0 +1,37 @@
+{
+  "experiment": "CompositionProof-2",
+  "n_batteries": 24,
+  "n_distinct_calibration_epochs": 24,
+  "epochs_independent": true,
+  "pearson_rho": 0.9817,
+  "pearson_p": 0.0,
+  "spearman_rho": 0.7996,
+  "spearman_p": 0.0,
+  "spearman_ci95": [
+    0.4979,
+    0.9502
+  ],
+  "primary_estimator": "spearman",
+  "effect_band": 0.3,
+  "drift_guard": {
+    "shot_floor": 0.0316,
+    "guard_z": 2.0,
+    "S_obs_std": 0.1158,
+    "S_detectable": true,
+    "M_obs_std": 0.1105,
+    "M_detectable": true,
+    "both_detectable": true
+  },
+  "VERDICT": "CORRELATED",
+  "verdict_reason": "95% CI excludes 0 and |rho| >= effect band; cross-witness fluctuations are materially associated over the measured window.",
+  "honesty_bounds": [
+    "Device-dependent witnesses on co-located qubits; locality + detection loopholes OPEN.",
+    "Correlation is an OBSERVED association on ONE device over the measured window; not causal, not universal.",
+    "Correlation of fluctuations is only estimable when epoch drift exceeds the shot-noise floor.",
+    "Two batteries in the same calibration cycle are NOT two independent epochs."
+  ],
+  "manifest_check": {
+    "verified": true,
+    "detail": "all match"
+  }
+}

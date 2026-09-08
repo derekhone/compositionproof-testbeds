@@ -1,0 +1,150 @@
+{
+  "shots_per_circuit": 4000,
+  "source": "composition2_sim.py common_mode scenario (Aer feasibility, ZERO QPU)",
+  "epochs": [
+    {
+      "epoch_id": 1,
+      "calibration_ts": "2026-09-10T04:00:00Z",
+      "S": 2.763,
+      "M": 3.9565
+    },
+    {
+      "epoch_id": 2,
+      "calibration_ts": "2026-09-11T04:00:00Z",
+      "S": 2.757,
+      "M": 3.8725
+    },
+    {
+      "epoch_id": 3,
+      "calibration_ts": "2026-09-12T04:00:00Z",
+      "S": 2.7695,
+      "M": 3.9505
+    },
+    {
+      "epoch_id": 4,
+      "calibration_ts": "2026-09-13T04:00:00Z",
+      "S": 2.785,
+      "M": 3.9615
+    },
+    {
+      "epoch_id": 5,
+      "calibration_ts": "2026-09-14T04:00:00Z",
+      "S": 2.783,
+      "M": 3.9575
+    },
+    {
+      "epoch_id": 6,
+      "calibration_ts": "2026-09-15T04:00:00Z",
+      "S": 2.588,
+      "M": 3.775
+    },
+    {
+      "epoch_id": 7,
+      "calibration_ts": "2026-09-16T04:00:00Z",
+      "S": 2.778,
+      "M": 3.949
+    },
+    {
+      "epoch_id": 8,
+      "calibration_ts": "2026-09-17T04:00:00Z",
+      "S": 2.7725,
+      "M": 3.956
+    },
+    {
+      "epoch_id": 9,
+      "calibration_ts": "2026-09-18T04:00:00Z",
+      "S": 2.668,
+      "M": 3.8455
+    },
+    {
+      "epoch_id": 10,
+      "calibration_ts": "2026-09-19T04:00:00Z",
+      "S": 2.7835,
+      "M": 3.9565
+    },
+    {
+      "epoch_id": 11,
+      "calibration_ts": "2026-09-20T04:00:00Z",
+      "S": 2.439,
+      "M": 3.6285
+    },
+    {
+      "epoch_id": 12,
+      "calibration_ts": "2026-09-21T04:00:00Z",
+      "S": 2.7615,
+      "M": 3.9535
+    },
+    {
+      "epoch_id": 13,
+      "calibration_ts": "2026-09-22T04:00:00Z",
+      "S": 2.768,
+      "M": 3.959
+    },
+    {
+      "epoch_id": 14,
+      "calibration_ts": "2026-09-23T04:00:00Z",
+      "S": 2.752,
+      "M": 3.959
+    },
+    {
+      "epoch_id": 15,
+      "calibration_ts": "2026-09-24T04:00:00Z",
+      "S": 2.7835,
+      "M": 3.9615
+    },
+    {
+      "epoch_id": 16,
+      "calibration_ts": "2026-09-25T04:00:00Z",
+      "S": 2.7395,
+      "M": 3.925
+    },
+    {
+      "epoch_id": 17,
+      "calibration_ts": "2026-09-26T04:00:00Z",
+      "S": 2.3975,
+      "M": 3.601
+    },
+    {
+      "epoch_id": 18,
+      "calibration_ts": "2026-09-27T04:00:00Z",
+      "S": 2.796,
+      "M": 3.9465
+    },
+    {
+      "epoch_id": 19,
+      "calibration_ts": "2026-09-28T04:00:00Z",
+      "S": 2.57,
+      "M": 3.721
+    },
+    {
+      "epoch_id": 20,
+      "calibration_ts": "2026-09-29T04:00:00Z",
+      "S": 2.82,
+      "M": 3.96
+    },
+    {
+      "epoch_id": 21,
+      "calibration_ts": "2026-09-30T04:00:00Z",
+      "S": 2.603,
+      "M": 3.7725
+    },
+    {
+      "epoch_id": 22,
+      "calibration_ts": "2026-09-31T04:00:00Z",
+      "S": 2.8215,
+      "M": 3.9535
+    },
+    {
+      "epoch_id": 23,
+      "calibration_ts": "2026-09-32T04:00:00Z",
+      "S": 2.738,
+      "M": 3.8955
+    },
+    {
+      "epoch_id": 24,
+      "calibration_ts": "2026-09-33T04:00:00Z",
+      "S": 2.613,
+      "M": 3.79
+    }
+  ]
+}

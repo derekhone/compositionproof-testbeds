@@ -1,0 +1,101 @@
+{
+  "experiment": "CompositionProof-2",
+  "title": "Multi-Epoch Cross-Witness Correlation of Two Nonclassicality Witnesses on One Device",
+  "family": "Proof Composition (RF Proof Family \u2014 Deep Research Question #5)",
+  "relationship_to_prior_work": "Multi-epoch extension of CompositionProof-1's exact witnesses. OMNI-1 (DOI 10.5281/zenodo.21436092) and CompositionProof-1 are both SINGLE-EPOCH (simultaneous composition in one recorded state). CompositionProof-2 tests whether the two witnesses' epoch-to-epoch FLUCTUATIONS are correlated across many DISTINCT calibration epochs \u2014 a question neither prior result could address.",
+  "lock_prepared_utc": "2026-09-08T16:51:19.463563+00:00",
+  "backend_primary": "ibm_marrakesh (Heron r2, 156 qubits)",
+  "backend_backups": [
+    "ibm_fez",
+    "ibm_kingston"
+  ],
+  "design": "LONGITUDINAL: one 8-circuit battery (CHSH + Mermin-3) per DISTINCT calibration epoch",
+  "epoch_definition": "distinct device calibration state (backend.properties().last_update_date); shared-calibration batteries are NOT independent epochs",
+  "witnesses": {
+    "W1_CHSH": {
+      "classical": 2.0,
+      "quantum": 2.828,
+      "single_epoch_threshold": 2.2,
+      "circuits": 4
+    },
+    "W2_Mermin3": {
+      "classical": 2.0,
+      "quantum": 4.0,
+      "single_epoch_threshold": 2.6,
+      "circuits": 4
+    }
+  },
+  "shots_per_circuit": 4000,
+  "circuits_per_epoch": 8,
+  "shots_per_epoch": 32000,
+  "seed": 20260908,
+  "n_epochs_target": 30,
+  "n_epochs_min": 20,
+  "correlation_analysis": {
+    "primary_estimator": "Spearman rank correlation (rho_s)",
+    "secondary_estimator": "Pearson r (reported, not decisive)",
+    "ci_method": "epoch bootstrap, N_BOOT=5000, BOOT_SEED=20260908, 95%",
+    "effect_band": 0.3,
+    "drift_guard_z": 2.0,
+    "shot_floor_formula": "2/sqrt(shots)",
+    "verdicts": [
+      "CORRELATED",
+      "UNCORRELATED",
+      "INCONCLUSIVE",
+      "INCONCLUSIVE_NO_DRIFT"
+    ]
+  },
+  "power_analysis": {
+    "detect_correlation_n": "~30 epochs reliable at true rho ~0.75",
+    "certify_absence_n": "~150 epochs to certify UNCORRELATED (equivalence within +/-0.30 at true rho=0)",
+    "two_stage_design": "Stage 1 n=30 to detect; extend toward n~150 ONLY if Stage 1 INCONCLUSIVE and certifying absence is desired (fresh GO required)"
+  },
+  "est_qpu_seconds_per_epoch": [
+    8,
+    12
+  ],
+  "est_qpu_seconds_total_30_epochs": [
+    240,
+    360
+  ],
+  "budget_note": "~30 epochs span weeks across MULTIPLE 28-day rolling windows (~1 epoch per calibration cycle); the ~330 total QPU-seconds is spread across windows and does NOT consume 330s from one window.",
+  "control_validation": "PASS (6/6 cases: CORRELATED, UNCORRELATED, INCONCLUSIVE x2, INCONCLUSIVE_NO_DRIFT, shared-calibration->INCONCLUSIVE)",
+  "verifier": "independent SciPy re-derivation; agrees with sim hand-rolled estimator on example series (CORRELATED, CI excludes 0)",
+  "feasibility_sim": "common_mode->CORRELATED (Spearman 0.80), independent->INCONCLUSIVE at n=24, static->INCONCLUSIVE_NO_DRIFT",
+  "file_hashes_sha256": {
+    "PREREGISTRATION.docx": "ec42ec10b6c731f83fe70b66d2230fb8415aada836bf82cbd985bc224a51adcc",
+    "PREREGISTRATION.md": "52d0f11decc01c2829cabbf0b1abe0c8f92f544f69b076b7006642b561bcc3b3",
+    "PREREGISTRATION.pdf": "085fac40aefbb9ae50534430f22dfe6bcd5c0641e062bdf8cd6028be98f87d0b",
+    "composition2_sim.py": "afb17837a02a0f947a437b56a6ed5bba2dbf65ff4f13e9f454088f17a048c325",
+    "composition2_sim_result.json": "5a1e30719fa50a58804afc57aa08d5060307b9204fb6f03ce3f314d3fb23ef82",
+    "control_validate2.py": "1efc7276c604a38011dba1ed6a45179e6a0c326237b424dea60ee6a2d386684f",
+    "control_validation2_output.json": "bf4fefff79f9d5f15722f6cc6841a9f3df6d7a13df02f7bb04d265697f296ccf",
+    "series_example_sim.json": "5ad634ffc4eb2888ac7bd9edb084aae9cf7b608ad9261d172a9e3d0a896e26b8",
+    "submit_epoch.py": "c7c99423172f160e6c6cc6ba6845d8729b5a81a69842c20331eaebc983bd200e",
+    "verifier2.py": "41c1b2d3f0bef68bf5592f454b5ae39e976345d84159b753bcc4459e37d0a72c",
+    "verifier2_output_example.json": "5957d04272a0c52e2157a560d7f2c86054220210e3d4c700ace49db75bd8f457"
+  },
+  "manifest_file": "SHA256_MANIFEST.txt",
+  "composite_lock_sha256": "ebe0919b997341569670ccd27b2a8ff754599d242489a2b06ff4db20c8872fd6",
+  "hardware_submitted": false,
+  "qpu_seconds_spent_this_session": 0,
+  "sha_lock_decision": "CANDIDATE \u2014 awaiting CEO GO",
+  "hardware_execution_decision": "GATED",
+  "status": "LOCK CANDIDATE. No IBM Quantum job has been submitted. Hardware execution gated on explicit CEO 'GO COMPOSITIONPROOF-2'.",
+  "hardware_release_condition": "Derek Hone explicit authorization 'GO COMPOSITIONPROOF-2'. On GO: freeze this manifest as the composite lock, then submit ONE 8-circuit battery per distinct calibration epoch via submit_epoch.py (~1/day), collect >= N_min epochs, run verifier2.py on the assembled series, and publish a signed ProofRecord + Zenodo DOI with honesty bounds and the frozen verdict.",
+  "permitted_claim": "Across N distinct measured calibration epochs on one named IBM device over the measured window, the CHSH and Mermin-3 epoch-to-epoch fluctuations were [correlated / uncorrelated within +/-0.30 / inconclusive], with the stated Spearman estimate and 95% epoch-bootstrap CI.",
+  "forbidden_claims": [
+    "proved the witnesses are independent",
+    "proved a causal common cause (correlation != causation)",
+    "device-independent / loophole-free",
+    "universal / for all devices / for all witness pairs",
+    "first/only beyond cited DOIs"
+  ],
+  "honesty_bounds": [
+    "Device-dependent witnesses on co-located qubits.",
+    "Locality + detection loopholes OPEN; NOT device-independent; NOT loophole-free.",
+    "Cross-epoch correlation is an OBSERVED association on one device over the measured window; NOT a causal common cause; NOT universal.",
+    "'Epoch' = distinct calibration state; shared-calibration batteries are not independent epochs.",
+    "All simulator numbers are feasibility values; no hardware has run."
+  ]
+}

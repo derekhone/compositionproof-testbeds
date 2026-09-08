@@ -1,0 +1,85 @@
+{
+  "experiment": "CompositionProof-2",
+  "all_pass": true,
+  "n_cases": 6,
+  "cases": [
+    {
+      "case": "correlated_strong",
+      "expected": "CORRELATED",
+      "got": "CORRELATED",
+      "pass": true,
+      "spearman_rho": 0.7208,
+      "spearman_ci95": [
+        0.449,
+        0.8774
+      ],
+      "drift_both_detectable": true,
+      "n_distinct_epochs": 30
+    },
+    {
+      "case": "uncorrelated",
+      "expected": "UNCORRELATED",
+      "got": "UNCORRELATED",
+      "pass": true,
+      "spearman_rho": -0.07,
+      "spearman_ci95": [
+        -0.2362,
+        0.0964
+      ],
+      "drift_both_detectable": true,
+      "n_distinct_epochs": 150
+    },
+    {
+      "case": "uncorrelated_underpowered_n30",
+      "expected": "INCONCLUSIVE",
+      "got": "INCONCLUSIVE",
+      "pass": true,
+      "spearman_rho": -0.0227,
+      "spearman_ci95": [
+        -0.3663,
+        0.3273
+      ],
+      "drift_both_detectable": true,
+      "n_distinct_epochs": 30
+    },
+    {
+      "case": "no_drift",
+      "expected": "INCONCLUSIVE_NO_DRIFT",
+      "got": "INCONCLUSIVE_NO_DRIFT",
+      "pass": true,
+      "spearman_rho": 0.0719,
+      "spearman_ci95": [
+        -0.358,
+        0.4896
+      ],
+      "drift_both_detectable": false,
+      "n_distinct_epochs": 30
+    },
+    {
+      "case": "underpowered",
+      "expected": "INCONCLUSIVE",
+      "got": "INCONCLUSIVE",
+      "pass": true,
+      "spearman_rho": 0.3706,
+      "spearman_ci95": [
+        -0.3333,
+        0.8
+      ],
+      "drift_both_detectable": true,
+      "n_distinct_epochs": 12
+    },
+    {
+      "case": "shared_calibration",
+      "expected": "INCONCLUSIVE",
+      "got": "INCONCLUSIVE",
+      "pass": true,
+      "spearman_rho": 0.7289,
+      "spearman_ci95": [
+        0.4371,
+        0.8962
+      ],
+      "drift_both_detectable": true,
+      "n_distinct_epochs": 8
+    }
+  ]
+}
