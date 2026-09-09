@@ -5,6 +5,9 @@
 Derek Hone - Remnant Fieldworks Inc.
 Family: Proof Composition (RF Proof Family - Deep Research Question #5)
 
+**DOI (this version):** [10.5281/zenodo.22666466](https://doi.org/10.5281/zenodo.22666466)
+**DOI (concept, all versions):** [10.5281/zenodo.22666465](https://doi.org/10.5281/zenodo.22666465)
+
 ---
 
 ## STATUS: LONGITUDINAL HARDWARE CAMPAIGN IN PROGRESS - 1 / >=20 DISTINCT CALIBRATION EPOCHS COLLECTED - NO FINAL VERDICT
