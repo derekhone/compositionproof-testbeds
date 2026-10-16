@@ -163,4 +163,4 @@ See `CITATION.cff`. Cite as: Hone, Derek (2026). *CompositionProof-2:
 Cross-Witness Correlation Across Quantum Hardware Calibration Epochs -
 Preregistered Protocol and Epoch 1 Evidence.* Remnant Fieldworks Inc.
 
-License: CC-BY-4.0 (documents/data). Code under MIT unless noted.
+License: documents/data are CC BY 4.0 (see [LICENSE-docs](LICENSE-docs)); code is MIT (see [LICENSE](LICENSE)), unless a more specific notice applies. The CC-BY-4.0 value in CITATION.cff and .zenodo.json describes the research dataset/documents, not a replacement for the MIT code grant. Existing third-party terms and historical grants remain unchanged.
